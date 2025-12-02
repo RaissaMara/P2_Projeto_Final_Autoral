@@ -1,45 +1,54 @@
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 shadow-lg">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold" id="loginModalLabel">
-                        <img id="logo" src="img/Resolv.IA_Logo_claro.png" alt="logo Resolv.IA" style=" width: 20%;
-                            height: 20%;">
-                        Acesso ao Painel</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4">
-                    <form>
-                        <div class="mb-3">
-                            <label for="emailInput" class="form-label small text-muted fw-bold">E-MAIL CORPORATIVO</label>
-                            <input type="email" class="form-control" id="emailInput" placeholder="nome@empresa.com">
-                        </div>
-                        <div class="mb-4">
-                            <label for="passwordInput" class="form-label small text-muted fw-bold">SENHA</label>
-                            <input type="password" class="form-control" id="passwordInput" placeholder="******">
-                            <div class="text-end mt-1">
-                                <a href="#" class="text-decoration-none small text-primary">Esqueceu a senha?</a>
-                            </div>
-                        </div>
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    
+    <div class="card border-0 shadow-lg" style="max-width: 450px; width: 100%;">
+        
+        <div class="card-header bg-white border-0 pt-4 pb-0 text-center">
+            <img src="/img/Resolv.IA_Logo_claro.png" alt="logo Resolv.IA" 
+                 style="width: 60px; height: auto;" class="mb-2">
+            <h4 class="fw-bold text-dark">Acesso ao Painel</h4>
+        </div>
 
-                        <div class="alert alert-light border rounded p-3 mb-3 bg-light">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="lgpdCheck" required>
-                                <label class="form-check-label small" for="lgpdCheck">
-                                    <strong>Concordo com os Termos de Uso e Privacidade.</strong><br>
-                                    Estou ciente de que meus dados serão processados para fins de autenticação e segurança, em conformidade com a <strong>LGPD (Lei n.º 13.709/2018)</strong>.
-                                </label>
-                            </div>
-                        </div>
+        <div class="card-body p-4">
+            <form (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label small text-muted fw-bold">E-MAIL CORPORATIVO</label>
+                    <input type="email" class="form-control" id="emailInput" 
+                           placeholder="nome@empresa.com"
+                           [(ngModel)]="loginData.email" name="email" required>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="passwordInput" class="form-label small text-muted fw-bold">SENHA</label>
+                    <input type="password" class="form-control" id="passwordInput" 
+                           placeholder="******"
+                           [(ngModel)]="loginData.password" name="password" required>
+                    <div class="text-end mt-1">
+                        <a href="#" class="text-decoration-none small text-primary">Esqueceu a senha?</a>
+                    </div>
+                </div>
 
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary py-2">Entrar no Sistema</button>
-                        </div>
-                    </form>
+                <div class="alert alert-light border rounded p-3 mb-3 bg-light">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="lgpdCheck" 
+                               [(ngModel)]="loginData.agreeToTerms" name="agreeToTerms" required>
+                        <label class="form-check-label small" for="lgpdCheck">
+                            <strong>Concordo com os Termos de Uso e Privacidade.</strong><br>
+                            Estou ciente do processamento de dados conforme a <strong>LGPD</strong>.
+                        </label>
+                    </div>
                 </div>
-                <div class="modal-footer justify-content-center bg-light rounded-bottom">
-                    <p class="small mb-0 text-muted">Ainda não é cliente? <a href="#contato" class="text-primary fw-bold text-decoration-none" data-bs-dismiss="modal">Solicite uma demonstração do serviço</a></p>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary py-2" 
+                            [disabled]="!loginData.agreeToTerms">Entrar no Sistema</button>
                 </div>
-            </div>
+            </form>
+        </div>
+        
+        <div class="card-footer bg-light border-0 text-center py-3">
+            <p class="small mb-0 text-muted">Ainda não é cliente? 
+                <a href="#contato" class="text-primary fw-bold text-decoration-none">Solicite uma demonstração</a>
+            </p>
         </div>
     </div>
+</div>

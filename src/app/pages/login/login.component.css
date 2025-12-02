@@ -2,6 +2,11 @@
         .vh-100 {
             min-height: 100vh;
         }
+        /* Caso suas variáveis não estejam carregando, defina fallbacks aqui ou no styles.css global */
+        :root {
+            --accent-color: #0d6efd; /* Exemplo de azul bootstrap */
+            --primary-color: #0a58ca;
+        }
         .btn-primary {
             background-color: var(--accent-color);
             border: none;

@@ -1,0 +1,31 @@
+        /* Garante que o container ocupe a altura total da viewport */
+        .vh-100 {
+            min-height: 100vh;
+        }
+        .btn-primary {
+            background-color: var(--accent-color);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px; /* Botões arredondados modernos */
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+        }        
+        /* Seção "A Ponte" (Dark) */
+        .bridge-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 80px 0;
+        }
+        .bridge-section h2 {
+            color: white;
+        }
+
+        /* Imagens (Placeholders) */
+        .img-rounded-custom {
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }

@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+        :root {
+            --primary-color: #0A2540; /* Azul Profundo (Confiança) */
+            --accent-color: #0d6efd;  /* Azul Elétrico (Ação/Tech) */
+            --bg-light: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1A1B25;
+            line-height: 1.6;
+        }
+         #logo {
+            width: 20%;
+            height: 20%;
+            display: flex;
+            justify-content: flex-start;
+            font-size: small;
+        }
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+        }

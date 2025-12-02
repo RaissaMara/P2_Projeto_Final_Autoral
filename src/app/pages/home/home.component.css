@@ -1,0 +1,26 @@
+/* --- Estilo Personalizado "Clean Tech" --- */
+        :root {
+            --primary-color: #0A2540; /* Azul Profundo (Confiança) */
+            --accent-color: #0d6efd;  /* Azul Elétrico (Ação/Tech) */
+            --bg-light: #F8F9FA;
+        }
+        /* Seção Hero */
+        .hero-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 100px;
+        }
+                /* Seção "A Ponte" (Dark) */
+        .bridge-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 80px 0;
+        }
+        .bridge-section h2 {
+            color: white;
+        }
+
+        /* Imagens (Placeholders) */
+        .img-rounded-custom {
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }

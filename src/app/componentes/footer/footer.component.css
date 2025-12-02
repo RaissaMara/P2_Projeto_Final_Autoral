@@ -7,3 +7,7 @@
         .bridge-section h2 {
             color: white;
         }
+        /* Garante que o container ocupe a altura total da viewport */
+        .vh-100 {
+            min-height: 100vh;
+        }

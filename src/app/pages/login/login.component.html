@@ -3,7 +3,7 @@
     <div class="card border-0 shadow-lg" style="max-width: 450px; width: 100%;">
         
         <div class="card-header bg-white border-0 pt-4 pb-0 text-center">
-            <img src="/img/Resolv.IA_Logo_claro.png" alt="logo Resolv.IA" 
+            <img src="img/Resolv.IA_Logo_claro.png" alt="logo Resolv.IA" 
                  style="width: 60px; height: auto;" class="mb-2">
             <h4 class="fw-bold text-dark">Acesso ao Painel</h4>
         </div>
@@ -37,11 +37,15 @@
                         </label>
                     </div>
                 </div>
-
+                <div *ngIf="errorMessage" class="alert alert-danger small p-2 text-center">
+                        {{ errorMessage }}</div>
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn btn-primary py-2" 
-                            [disabled]="!loginData.agreeToTerms">Entrar no Sistema</button>
-                </div>
+                        [disabled]="!loginData.agreeToTerms || isLoading">
+                    <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                    <span *ngIf="!isLoading">Entrar no Sistema</span>
+                    <span *ngIf="isLoading">Verificando...</span>
+                </button> </div>
             </form>
         </div>
         

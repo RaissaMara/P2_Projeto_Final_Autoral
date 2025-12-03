@@ -4,6 +4,10 @@
             --bg-light: #F8F9FA;
         }
 
+        a{
+            text-decoration: none;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             color: #1A1B25;

@@ -11,3 +11,8 @@
         .vh-100 {
             min-height: 100vh;
         }
+        footer{
+            position: relative;
+            bottom:  0;
+            width: 100%;
+        }
